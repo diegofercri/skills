@@ -1,0 +1,47 @@
+{
+  "reviewed_on": "2026-10-29",
+  "update_policy": "Manual editorial review. Never replace the curated catalog wholesale with upstream.",
+  "sources": [
+    {
+      "id": "local-snapshot",
+      "archive": "archive/originals-2026-10-29.zip",
+      "hashes": "archive/originals-2026-10-29.sha256.json",
+      "description": "Exact input files, including CLAUDE.md, INDEX.md and original provenance. Not an installable catalog."
+    },
+    {
+      "id": "absolutelyskilled",
+      "url": "https://github.com/maddhruv/absolute",
+      "revision": "1c8c79ae7d24df8779cb7847e676a3ab73bd400b",
+      "revision_evidence": "Original local PROVENANCE.md for architecture, review, refactoring and testing. Not independently re-fetched in this implementation.",
+      "exception": "clean-code: local ZIP, commit unknown",
+      "license": "MIT declared in original frontmatter; exact upstream copyright notice unavailable",
+      "destinations": ["architecture", "code-quality", "refactoring", "testing", "review"]
+    },
+    {
+      "id": "nathankim0",
+      "url": "https://github.com/nathankim0/clean-architecture-skills",
+      "revision": null,
+      "revision_evidence": "Read main through web retrieval on reviewed_on. Immutable commit could not be retrieved; this is not a pinned upstream snapshot.",
+      "paths": ["plugins/clean-architecture/skills/clean-architecture/SKILL.md", "plugins/kent-beck-style/skills/kent-beck-style/SKILL.md"],
+      "license_url": "https://raw.githubusercontent.com/nathankim0/clean-architecture-skills/main/LICENSE",
+      "license": "MIT",
+      "destinations": ["architecture", "refactoring"]
+    },
+    {
+      "id": "thermos",
+      "url": "https://github.com/cursor/plugins/tree/main/thermos",
+      "revision": null,
+      "revision_evidence": "Read main through web retrieval on reviewed_on. Immutable commit could not be retrieved; this is not a pinned upstream snapshot.",
+      "paths": ["skills/thermos/SKILL.md", "skills/thermo-nuclear-review/SKILL.md", "skills/thermo-nuclear-code-quality-review/SKILL.md"],
+      "license_url": "https://raw.githubusercontent.com/cursor/plugins/main/thermos/LICENSE",
+      "license": "MIT",
+      "destinations": ["review"]
+    },
+    {
+      "id": "antislop",
+      "revision": "Local files identified by archive hashes; no upstream commit verified",
+      "license": "Unverified for core and comment guidance",
+      "decision": "Keep original privately archived. Replace comment capability with original prose; exclude UI, human/accessibility and copywriting modules."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "Acceptance scenarios for real client sessions; not automated model evaluations",
+  "cases": [
+    {"prompt": "Implementa el parser siguiendo los nombres y errores del proyecto", "primary": "code-quality", "expect": "Implement the requested behavior without triggering a formal/exhaustive review"},
+    {"prompt": "Limpia solo los comentarios de este archivo", "primary": "code-quality", "fixture": "Comments include redundant narration, a compiler directive, a license header and a workaround with an issue link", "expect": "Remove only redundant commentary; keep directives, notices and useful workaround context; executable code unchanged"},
+    {"prompt": "Separa las reglas de pedidos del SDK de pagos", "primary": "architecture", "expect": "Inspect dependencies and propose the smallest useful port; a single adapter is not grounds to reject the boundary"},
+    {"prompt": "Necesito cuatro capas para este script de 30 lineas?", "primary": "architecture", "expect": "Assess the actual coupling; do not mandate four layers"},
+    {"prompt": "Refactoriza este switch de tres casos estables sin cambiar comportamiento", "primary": "refactoring", "expect": "Do not require polymorphism; preserve contracts and use proportionate verification"},
+    {"prompt": "Extrae el calculo de precio sin cambiar el numero de llamadas HTTP", "primary": "refactoring", "expect": "Preserve evaluation count and order; do not replace a cached value with repeated live queries"},
+    {"prompt": "Como pruebo una restriccion diferida hasta COMMIT?", "primary": "testing", "expect": "Use a real committed transaction; rollback-only tests and an in-memory fake are insufficient evidence"},
+    {"prompt": "Haz TDD para este cambio de comportamiento", "primary": "testing", "expect": "Observe the intended failing behavior before implementation; a setup failure is not the regression"},
+    {"prompt": "Revisa lo staged", "primary": "review", "fixture": "Both staged and unstaged files exist", "expect": "Review staged scope, mention omissions, do not edit or run exhaustive mode"},
+    {"prompt": "Haz una revision Thermos de la rama contra develop", "primary": "review", "fixture": "One changed path writes state twice without atomicity; the same root cause is visible in correctness and maintainability passes", "expect": "Two sequential passes, one deduplicated evidenced finding, no edits, no spawned agents"},
+    {"prompt": "Revisa esta rama", "primary": "review", "fixture": "No usable base ref and no local diff", "expect": "Ask for a target/base; do not invent main or fetch/change branches"},
+    {"prompt": "Disena una landing con colores de marca", "primary": null, "expect": "No curated skill owns visual design; do not load antislop or install anything"},
+    {"prompt": "Reescribe este texto de marketing", "primary": null, "expect": "No curated programming skill owns copywriting"}
+  ]
+}
